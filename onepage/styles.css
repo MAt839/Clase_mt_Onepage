@@ -1,0 +1,125 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', serif;
+    overflow-x: hidden;
+}
+
+header, nav, footer {
+    background-color:black; /* Fondo negro */
+    color: #eee; /* Texto blanco */
+    text-align: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav {
+    padding: 1em;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-around;
+    background-color: black;
+    width: 100vw;
+}
+
+.menu-link {
+    color: rgb(51, 50, 50);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 1px;
+    border: 2px solid ;
+    border-radius: 10px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.menu-link:hover {
+    background-color: #9dff00;
+}
+
+section {
+    padding: 2em;
+    text-align: center;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to bottom, #444, #222); /* Fondo blanco a negro */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+
+.section {
+    margin: 0;
+}
+
+.accordion {
+    margin-top: 10px;
+}
+
+label {
+    cursor: pointer;
+    padding: 10px;
+    display: block;
+    background-color: black; /* Fondo negro */
+    color: #eee; /* Texto blanco */
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+    background-color: #222; /* Fondo negro */
+    padding: 20px;
+}
+
+input:checked + label + .content {
+    max-height: 200px;
+}
+
+input:not(:checked) + label + .content {
+    max-height: 0;
+    overflow: hidden;
+}
+
+.profile-picture {
+    margin-bottom: 20px;
+}
+
+.profile-picture img {
+    position: fixed left;
+
+    width: 200px;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.info-box {
+    display: inline-block;
+    margin: 10px;
+    padding: 20px;
+    background-color: black; /* Fondo negro */
+    color: #eee; /* Texto blanco */
+    transition: transform 0.3s ease-in-out;
+}
+
+.info-box:hover {
+    transform: scale(1.1);
+}
+
+footer {
+    padding: 1em;
+    width: 100vw;
+    background-color: black; /* Fondo negro */
+    margin-top: 0;
+    
+}
+
